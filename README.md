@@ -1,6 +1,7 @@
 # Web-Automation-Dev
 
 The goal of this project is not just to display product information, but to effectively handle API limitations and ensure complete data collection for further analysis.
+The project is written in pure __JS__ using __Node.js__. In requests to the server, I used an asynchronous function using the [axios](https://axios-http.com/) library.
 
 ## Getting Started
 
