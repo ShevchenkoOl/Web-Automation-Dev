@@ -1,0 +1,21 @@
+{
+  "name": "web-automation-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "type": "module",
+  
+  "scripts": {
+    "start": "node script.js"
+  },
+  "keywords": [],
+  "author": "Oleksii Shevchenko <uzlabini@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.7.0",
+    "sinon": "^18.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
