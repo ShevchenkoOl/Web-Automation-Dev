@@ -2,11 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Получаем путь к текущему файлу и директории
+// Get the path to the current file and directory
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Функция для генерации случайных данных
+// Function for generating random data
 const generateRandomProduct = (id) => {
   return {
     id: id,
@@ -15,7 +15,7 @@ const generateRandomProduct = (id) => {
   };
 };
 
-// Функция для генерации массива продуктов
+// Function to generate array of products
 const generateProducts = (totalProducts) => {
   const products = [];
   for (let i = 1; i <= totalProducts; i++) {
@@ -28,20 +28,19 @@ const generateProducts = (totalProducts) => {
   };
 };
 
-// Генерируем данные
+// Generate data
 const totalProducts = 1500;
 const productsData = [generateProducts(totalProducts)];
 
-// Путь к папке api
+// Path to the api folder
 const apiDir = path.join(__dirname, 'api');
 const filePath = path.join(apiDir, 'products.json');
 
-// Убедитесь, что папка существует, иначе создайте ее
 if (!fs.existsSync(apiDir)) {
   fs.mkdirSync(apiDir, { recursive: true });
 }
 
-// Записываем в файл в формате JSON
+// Write to file in JSON format
 fs.writeFile(filePath, JSON.stringify(productsData, null, 2), (err) => {
   if (err) {
     console.error('Error writing file:', err);
